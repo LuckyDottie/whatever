@@ -6,7 +6,7 @@ function parseRepeat(str) {
     if (i === str.length) break;
     var c = str[i];
     var next = str[i + 1];
-    if (/\d/.test(x) && next === '[') {
+    if (/\d/.test(c) && next === '[') {
       var closeParenIndex = findCloseParen(str.slice(i + 1));
       let substr = str.slice(i + 1).slice(1, closeParenIndex);
       buffer += parseRepeat(substr).repeat(c);
