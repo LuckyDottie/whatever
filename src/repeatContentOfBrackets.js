@@ -78,11 +78,3 @@ function popModel(str) {
     }
 }
 module.exports = repeatContentOfBrackets;
-
-repeatContentOfBrackets('3xy');
-repeatContentOfBrackets('xy2');
-repeatContentOfBrackets('xy');
-repeatContentOfBrackets('abc3[a]');
-repeatContentOfBrackets('3[abc]');
-repeatContentOfBrackets('4[abc]ty');//abcabcabcabcty
-repeatContentOfBrackets('3[2[ad]3[pf]]xyz');//adadpfpfpfadadpfpfpfadadpfpfpfxyz
