@@ -17,9 +17,6 @@ function repeatContentOfBrackets(str) {
         return result + repeatContentOfBrackets(model.content).repeat(model.repeation);
     }else {
         for (var i = 0; i < modelsLen; i++) {
-            // if (!repeatContentOfBrackets(models[i].modelStr)) {//某些并列模式中可能存在嵌套结构,如果内层返回undefined,则整个会返回undefined
-            //     return;
-            // }
             result += repeatContentOfBrackets(models[i].modelStr);
         }
         return result;
