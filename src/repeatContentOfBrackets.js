@@ -2,7 +2,7 @@ function repeatContentOfBrackets(str) {
     if (str === undefined) return;
     var reg = /^([a-zA-Z]*)(\d+\[.+\])*[a-zA-Z]*$/;//嵌套模式的合法性,递归时检查
     var regModel = str.match(reg);
-    if (!regModel) return; //输入不合法直接返回
+    if (!regModel) return str; //输入不合法直接返回
     if (!regModel[2]) return regModel[1];
     var result = regModel[1];
     //处理并列模式,eg:3[ad]4[xs]
@@ -17,9 +17,9 @@ function repeatContentOfBrackets(str) {
         return result + repeatContentOfBrackets(model.content).repeat(model.repeation);
     }else {
         for (var i = 0; i < modelsLen; i++) {
-            if (!repeatContentOfBrackets(models[i].modelStr)) {//某些并列模式中可能存在嵌套结构,如果内层返回undefined,则整个会返回undefined
-                return;
-            }
+            // if (!repeatContentOfBrackets(models[i].modelStr)) {//某些并列模式中可能存在嵌套结构,如果内层返回undefined,则整个会返回undefined
+            //     return;
+            // }
             result += repeatContentOfBrackets(models[i].modelStr);
         }
         return result;
