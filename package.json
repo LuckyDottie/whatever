@@ -1,0 +1,22 @@
+{
+  "name": "whatever",
+  "version": "1.0.0",
+  "description": "fighting-then-improving",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckyDottie/whatever.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuckyDottie/whatever/issues"
+  },
+  "homepage": "https://github.com/LuckyDottie/whatever#readme",
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  }
+}
