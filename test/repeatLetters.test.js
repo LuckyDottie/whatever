@@ -2,8 +2,8 @@
  * Created by LuckyDottie on 2017/5/14.
  */
 var assert = require('assert');
-var repeatContentOfBrackets = require('../src/repeatContentOfBrackets');
-describe('repeatContentOfBrackets test cases', function(){
+var repeatContentOfBrackets = require('../src/repeatLetters');
+describe('repeatLetters test cases', function(){
     it('should return 3xy', function(){
         assert.equal('3xy', repeatContentOfBrackets('3xy'));
     });
@@ -30,5 +30,8 @@ describe('repeatContentOfBrackets test cases', function(){
     });
     it('should return xtyxtyxty]', function(){
         assert.equal('xtyxtyxty]', repeatContentOfBrackets('3[xty]]'));
+    });
+    it('should return x[ty]x[ty]x[ty]', function(){
+        assert.equal('x[ty]x[ty]x[ty]', repeatContentOfBrackets('3[x[ty]]'));
     });
 });
