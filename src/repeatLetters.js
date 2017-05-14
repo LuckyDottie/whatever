@@ -16,7 +16,7 @@ function repeatContentOfBrackets (str) {
         }
         if (/\d/.test(cur))  repeationStr += cur;
         if (cur === '[') {
-            openBracket = true; //todo: push stack 是否应该关闭????
+            openBracket = true;
             repeation = + repeationStr;
             if (!!content) stack[stack.length-1].content += content;//如果content非空,说明有外层[]
             content = '';
@@ -28,8 +28,8 @@ function repeatContentOfBrackets (str) {
             repeationStr = '';
             norepeatStr = '';
         }
-        if (cur === ']') {//匹配到一个模式,开始处理 todo:]后面的字符串如何处理
-            if (stack.length === 0) { //模式匹配失败直接返回; todo:此句是否必要,后面没有repetion也会知道模式匹配失败
+        if (cur === ']') {//匹配到一个模式,开始处理
+            if (stack.length === 0) { //模式匹配失败直接返回;
                 resultStr += str.substring(modelBegin,i+1);
             }else {
                 openBracket = false;
