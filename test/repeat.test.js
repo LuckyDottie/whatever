@@ -3,7 +3,7 @@
  */
 var assert = require('assert');
 var repeatContentOfBrackets = require('../src/repeat');
-describe('repeatContentOfBrackets test cases', function(){
+describe('repeat test cases', function(){
     it('should return 3xy', function(){
         assert.equal('3xy', repeatContentOfBrackets('3xy'));
     });
@@ -15,6 +15,9 @@ describe('repeatContentOfBrackets test cases', function(){
     });
     it('should return abcaaa', function(){
         assert.equal('abcaaa', repeatContentOfBrackets('abc3[a]'));
+    });
+    it('should return aaaaaaaaaaaa', function(){
+        assert.equal('aaaaaaaaaaaa', repeatContentOfBrackets('12[a]'));
     });
     it('should return abcabcabcabcty', function(){
         assert.equal('abcabcabcabcty', repeatContentOfBrackets('4[abc]ty'));
