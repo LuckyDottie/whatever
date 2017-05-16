@@ -57,8 +57,4 @@ function repeatContentOfBrackets (str) {
 }
 module.exports = repeatContentOfBrackets;
 
-
-//todo: 处理最后几个字符串
-
-
 //todo: nestCount 其实就是 stack.length。 维护nestCount 与 stack.length的一致性  VS stack.length多次求值
