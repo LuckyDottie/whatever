@@ -11,11 +11,11 @@ function decodeCount(input) {
         next = +input[i+1];
         nnext = +input[i+2];
         if ((cur === 2) && (next <= 6 ) || (cur === 1)) {
-            if (nnext !== undefined && nnext === 0) {
-                i = i + 2;
-                continue;
-            }
             if (i+2 < len) {
+                if (nnext === 0) {
+                    i = i + 2;
+                    continue;
+                }
                 return decodeCount(input.substring(i+1)) + decodeCount(input.substring(i+2));
             }
             if (!next) {//next为0或是不存在
