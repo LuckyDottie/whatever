@@ -3,13 +3,16 @@ function decodeCount(input) {
     input = input.toString();
     if (!/^\d+$/.test(input)) return 0;
     var len = input.length;
-    var i = 0;
+    var i = 0, cur, next, pre ;
     if (len === 1) return 1;
     for (; i < len; i++) {
-        var cur  = input[i];
-        var next = input[i+1];
+        cur  = input[i];
+        next = input[i+1];
+        pre = input[i-1];
         if ((+cur === 2) && (+next <= 6) || (+cur === 1)) {
             return i+2 < len ? decodeCount(input.substring(i+1)) + decodeCount(input.substring(i+2)) : 2;
+        }else if (+cur === 0 && (!pre || pre > 2)) {
+            return 0;
         }
     }
     return 1;

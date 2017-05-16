@@ -43,4 +43,7 @@ describe('decodeCount test cases', function(){
     it('should return 2', function(){
         assert.equal(2, decodeCount('1277'));
     });
+    it('should return 0', function(){
+        assert.equal(0, decodeCount('90'));
+    });
 });
