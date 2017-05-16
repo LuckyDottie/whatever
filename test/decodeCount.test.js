@@ -55,4 +55,22 @@ describe('decodeCount test cases', function(){
     it('should return 0', function(){
         assert.equal(0, decodeCount('0920'));
     });
+    it('should return 1', function(){
+        assert.equal(1, decodeCount('10'));
+    });
+    it('should return 1', function(){
+        assert.equal(1, decodeCount('20'));
+    });
+    it('should return 1', function(){
+        assert.equal(1, decodeCount('120'));
+    });
+    it('should return 1', function(){
+        assert.equal(1, decodeCount('110'));
+    });
+    it('should return 1', function(){
+        assert.equal(1, decodeCount('1101'));
+    });
+    it('should return 2', function(){
+        assert.equal(2, decodeCount('11012'));
+    });
 });
