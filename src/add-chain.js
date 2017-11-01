@@ -17,7 +17,7 @@ var currySum = function (a) {
 //         return add.apply(null, args.concat(arg_fn));
 //     }
 //
-//     fn.valueOf = fn.inspect = function() { // valueOf trick browser; inspect trick node
+//     fn.valueOf = fn.inspect = function() { // 'inspect' trick node console.log
 //         return args.reduce((a, b) => a + b);
 //     }
 //     return fn;
