@@ -23,6 +23,16 @@ var currySum = function (a) {
 //     return fn;
 // }
 
+// 解法一: ES6
+// function add(...numbers) {
+//     numbers = numbers || [];
+//     function sum(...sum_args) {
+//         return add.apply(null, numbers.concat(sum_args || []));
+//     }
+//     sum.valueOf = () =>  numbers.reduce((a,b) => a+b)
+//     return sum;
+// }
+
 
 // 解法二:
 function add(...numbers) {
